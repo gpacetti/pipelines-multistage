@@ -50,6 +50,7 @@ stages:
       - script: |
           echo "This is job Foo."
           echo "##vso[task.setvariable variable=doThing;isOutput=true]Yes"
+        name: DetermineResult
     - job: Bar
       dependsOn: Foo
       condition: eq(dependencies.Foo.outputs['DetermineResult.doThing'], 'Yes') #map doThing and check if true
