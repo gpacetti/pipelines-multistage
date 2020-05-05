@@ -46,7 +46,7 @@ stages:
   dependsOn: prod
   jobs:
     - job: Foo
-    steps:
+      steps:
   -   script: |
       echo "This is job Foo."
       echo "##vso[task.setvariable variable=doThing;isOutput=true]Yes" #The variable doThing is set to true
