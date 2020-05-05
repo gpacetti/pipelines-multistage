@@ -24,6 +24,7 @@ stages:
       vmImage: 'Ubuntu 16.04'
     steps:
     - script: echo Test
+    - script: echo Test1
     
 - stage: staging
   dependsOn: test
